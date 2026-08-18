@@ -166,7 +166,7 @@ export const translations: Record<Lang, Translation> = {
       subtitle: "¿Tienes un proyecto, una idea o simplemente quieres hablar de tecnología? Mi bandeja de entrada está abierta.",
       emailCta: "Escríbeme",
       social: "Encuéntrame en",
-      location: "Lima, Perú · Trabajo remoto",
+      location: "Resido en Perú · Actualmente de intercambio en Santiago de Chile",
     },
     footer: {
       madeWith: "Diseñado con pasión",
@@ -261,7 +261,7 @@ export const translations: Record<Lang, Translation> = {
       subtitle: "Got a project, an idea, or just want to talk tech? My inbox is open.",
       emailCta: "Email me",
       social: "Find me on",
-      location: "Lima, Peru · Remote-friendly",
+      location: "Based in Peru · Currently on exchange in Santiago, Chile",
     },
     footer: {
       madeWith: "Designed with passion",
