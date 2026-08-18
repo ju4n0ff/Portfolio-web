@@ -87,7 +87,7 @@ export const translations: Record<Lang, Translation> = {
     hero: {
       role: "Full-Stack",
       roleAccent: "Developer",
-      lema: "Building immersive digital experiences.",
+      lema: "",
       cta: "Ver proyectos",
       ctaSecondary: "Contáctame",
       available: "Disponible para oportunidades",
