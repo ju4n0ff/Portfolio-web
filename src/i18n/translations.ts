@@ -98,9 +98,9 @@ export const translations: Record<Lang, Translation> = {
     about: {
       eyebrow: "Sobre mí",
       title: "La curiosidad de desarmar, el oficio de construir.",
-      p1: "Mi trayectoria en la tecnología comenzó con la curiosidad — desarmar cosas para entender cómo funcionan. Hoy, esa curiosidad me impulsa a crear. Estudio Ingeniería de Sistemas, donde descubrí que el buen software es más que código: se trata de entender a las personas, resolver problemas reales y crear experiencias que conecten.",
-      p2: "Me especializo en desarrollo full-stack con enfoque en el frontend. Creo que las interfaces deben ser intuitivas, rápidas y hermosas. Cada proyecto es una oportunidad para aprender algo nuevo, superar límites creativos y construir algo significativo.",
-      p3: "Cuando no estoy programando, exploro sistemas de diseño, experimento con tecnologías creativas y pienso en cómo será la próxima generación de experiencias digitales.",
+      p1: "Mi forma de aprender siempre ha partido de la curiosidad: entender cómo funcionan las cosas, desarmarlas, probarlas y luego intentar construir algo propio. Con el tiempo, esa curiosidad se convirtió en una forma de trabajar: aprender haciendo, experimentar con nuevas tecnologías y buscar soluciones que no solo funcionen, sino que tengan sentido para quien las utiliza.",
+      p2: "Todavía estoy construyendo mi camino profesional, y precisamente por eso cada proyecto representa una oportunidad para aprender, equivocarme, mejorar y llevar una idea un poco más lejos que la anterior.",
+      p3: "Cuando no estoy programando, simplemente intento no pasar todo el tiempo frente a una pantalla. Me gusta correr, escuchar música, el café, aprender cosas nuevas y conocer lugares y personas.",
       stats: {
         projects: { value: "7+", label: "proyectos construidos" },
         years: { value: "3+", label: "años aprendiendo" },
@@ -193,9 +193,9 @@ export const translations: Record<Lang, Translation> = {
     about: {
       eyebrow: "About me",
       title: "The curiosity to take apart, the craft of building.",
-      p1: "My path in technology began with curiosity — taking things apart to understand how they work. Today, that curiosity drives what I create. I study Systems Engineering, where I learned that good software is more than code: it's about understanding people, solving real problems, and crafting experiences that connect.",
-      p2: "I specialize in full-stack development with a frontend focus. I believe interfaces should be intuitive, fast, and beautiful. Every project is a chance to learn something new, push creative limits, and build something meaningful.",
-      p3: "When I'm not coding, I explore design systems, experiment with creative technologies, and think about what the next generation of digital experiences will look like.",
+      p1: "My way of learning has always started with curiosity: understanding how things work, taking them apart, testing them, and then trying to build something of my own. Over time, that curiosity became a way of working: learning by doing, experimenting with new technologies, and looking for solutions that not only work but make sense to the people who use them.",
+      p2: "I'm still building my professional path, and precisely because of that, every project is an opportunity to learn, make mistakes, improve, and take an idea a little further than the one before.",
+      p3: "When I'm not coding, I simply try not to spend all my time in front of a screen. I like running, listening to music, coffee, learning new things, and getting to know new places and people.",
       stats: {
         projects: { value: "7+", label: "projects built" },
         years: { value: "3+", label: "years learning" },
