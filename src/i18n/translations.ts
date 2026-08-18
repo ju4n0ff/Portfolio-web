@@ -169,7 +169,7 @@ export const translations: Record<Lang, Translation> = {
       location: "Lima, Perú · Trabajo remoto",
     },
     footer: {
-      madeWith: "Diseñado y construido con",
+      madeWith: "Diseñado con pasión",
     },
   },
   en: {
@@ -264,7 +264,7 @@ export const translations: Record<Lang, Translation> = {
       location: "Lima, Peru · Remote-friendly",
     },
     footer: {
-      madeWith: "Designed & built with",
+      madeWith: "Designed with passion",
     },
   },
 };

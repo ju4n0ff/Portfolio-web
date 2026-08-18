@@ -27,8 +27,6 @@ export function Footer() {
         <p className="flex items-center gap-1.5 text-xs text-fog">
           {t.footer.madeWith}
           <HeartIcon className="h-3.5 w-3.5 text-terracotta" />
-          <span className="font-semibold text-ink">React</span>
-          &amp; <span className="font-semibold text-ink">Tailwind</span>
         </p>
       </div>
     </footer>
