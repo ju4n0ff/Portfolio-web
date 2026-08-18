@@ -16,7 +16,6 @@ export interface Translation {
     contact: string;
   };
   hero: {
-    greeting: string;
     role: string;
     roleAccent: string;
     lema: string;
@@ -72,7 +71,6 @@ export interface Translation {
   };
   footer: {
     madeWith: string;
-    rights: string;
   };
 }
 
@@ -87,7 +85,6 @@ export const translations: Record<Lang, Translation> = {
       contact: "Contacto",
     },
     hero: {
-      greeting: "Hola, soy",
       role: "Full-Stack",
       roleAccent: "Developer",
       lema: "Building immersive digital experiences.",
@@ -169,7 +166,6 @@ export const translations: Record<Lang, Translation> = {
     },
     footer: {
       madeWith: "Diseñado y construido con",
-      rights: "Todos los derechos reservados.",
     },
   },
   en: {
@@ -182,7 +178,6 @@ export const translations: Record<Lang, Translation> = {
       contact: "Contact",
     },
     hero: {
-      greeting: "Hi, I'm",
       role: "Full-Stack",
       roleAccent: "Developer",
       lema: "Building immersive digital experiences.",
@@ -264,7 +259,6 @@ export const translations: Record<Lang, Translation> = {
     },
     footer: {
       madeWith: "Designed & built with",
-      rights: "All rights reserved.",
     },
   },
 };

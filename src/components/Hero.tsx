@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section id="hero" className="relative flex min-h-svh flex-col overflow-hidden">
       <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pt-28 pb-20 sm:px-8">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+        <div className="grid items-center gap-14 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
           <div>
             <motion.p
               initial={{ opacity: 0, y: 18 }}
@@ -23,7 +23,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.15, ease }}
               className="mb-6 text-sm tracking-wide text-clay"
             >
-              {t.hero.greeting} — {t.hero.available}
+              {t.hero.available}
             </motion.p>
 
             <h1 className="font-display font-semibold leading-[0.98] tracking-tight text-ink">
@@ -31,7 +31,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.25, ease }}
-                className="block text-[13.5vw] sm:text-8xl lg:text-[7rem]"
+                className="block text-[12.5vw] sm:text-7xl lg:text-[5.25rem]"
               >
                 Juan Carlos
               </motion.span>
@@ -39,9 +39,9 @@ export function Hero() {
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.38, ease }}
-                className="flex items-baseline gap-3 text-[13.5vw] sm:text-8xl lg:text-[7rem]"
+                className="block text-[12.5vw] sm:text-7xl lg:text-[5.25rem]"
               >
-                <span>Vega</span>
+                Vega Graterol
               </motion.span>
             </h1>
 
@@ -49,7 +49,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6, ease }}
-              className="mt-9 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between"
+              className="mt-10 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between"
             >
               <div className="max-w-md">
                 <p className="mb-3 font-display text-2xl text-espresso sm:text-3xl">

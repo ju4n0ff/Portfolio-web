@@ -11,15 +11,17 @@ export function Footer() {
         <button
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="font-display text-base font-semibold text-ink transition-colors hover:text-terracotta"
+          className="group flex items-center gap-2 font-display text-base font-semibold text-ink transition-colors hover:text-terracotta"
           aria-label="Volver arriba"
         >
-          Juan<span className="text-terracotta">Vega</span>
-          <span aria-hidden className="ml-2 text-terracotta">↑</span>
+          JCV
+          <span aria-hidden className="text-terracotta transition-transform duration-300 group-hover:-translate-y-0.5">
+            ↑
+          </span>
         </button>
 
-        <p className="flex items-center gap-1.5 text-xs text-fog">
-          © {year} {t.footer.rights}
+        <p className="text-xs text-fog">
+          © {year} Juan Carlos Vega Graterol
         </p>
 
         <p className="flex items-center gap-1.5 text-xs text-fog">

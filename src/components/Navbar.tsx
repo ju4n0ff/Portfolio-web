@@ -66,18 +66,6 @@ export function Navbar() {
           className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-[72px] sm:px-8"
           aria-label="Principal"
         >
-          <button
-            type="button"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="group flex items-baseline gap-1.5 font-display text-lg font-semibold text-ink"
-            aria-label="Ir al inicio"
-          >
-            Juan
-            <span className="text-terracotta transition-transform duration-300 group-hover:-translate-y-0.5">
-              Vega
-            </span>
-          </button>
-
           <div className="hidden items-center gap-7 md:flex">
             {SECTIONS.map((id) => (
               <button key={id} type="button" onClick={() => go(id)} className={linkClass(id)}>
@@ -90,17 +78,9 @@ export function Navbar() {
                 />
               </button>
             ))}
-            <button
-              type="button"
-              onClick={toggle}
-              className="ml-1 rounded-full border border-line-strong px-3 py-1.5 text-xs font-semibold text-ink transition-colors duration-200 hover:border-terracotta hover:text-terracotta"
-              aria-label="Cambiar idioma"
-            >
-              {t.langLabel}
-            </button>
           </div>
 
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center gap-3">
             <button
               type="button"
               onClick={toggle}
@@ -112,7 +92,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-line-strong text-ink"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-line-strong text-ink md:hidden"
               aria-label="Abrir menú"
               aria-expanded={open}
             >
@@ -135,10 +115,7 @@ export function Navbar() {
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-[60] flex flex-col bg-cream px-6 py-5 md:hidden"
           >
-            <div className="flex h-16 items-center justify-between">
-              <span className="font-display text-lg font-semibold text-ink">
-                Juan<span className="text-terracotta">Vega</span>
-              </span>
+            <div className="flex h-16 items-center justify-end">
               <button
                 type="button"
                 onClick={() => setOpen(false)}

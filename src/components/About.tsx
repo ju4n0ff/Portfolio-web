@@ -59,7 +59,7 @@ export function About() {
                     transition={{ duration: 0.7, delay: 0.3 }}
                     className="font-display text-7xl font-semibold text-ink"
                   >
-                    JV
+                    JCV
                   </motion.span>
                   <span className="h-px w-10 bg-terracotta" />
                   <p className="px-6 text-center text-xs leading-relaxed tracking-wide text-clay">
