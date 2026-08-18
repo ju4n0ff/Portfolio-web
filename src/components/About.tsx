@@ -1,4 +1,4 @@
-import { animate, motion, useInView } from "framer-motion";
+import { animate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "../i18n/LanguageContext";
 import { Reveal } from "./Reveal";
@@ -35,7 +35,7 @@ export function About() {
 
   return (
     <section id="about" className="border-t border-line">
-      <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
+      <div className="mx-auto max-w-6xl px-5 pt-16 pb-20 sm:px-8 sm:pt-20 sm:pb-24">
         <div className="grid gap-16 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
           <div className="flex flex-col gap-8">
             <Reveal>
@@ -48,25 +48,6 @@ export function About() {
               <h2 className="font-display text-4xl font-semibold leading-[1.08] text-ink text-balance sm:text-5xl">
                 {t.about.title}
               </h2>
-            </Reveal>
-            <Reveal delay={0.16}>
-              <div className="relative mt-4 aspect-[4/5] max-w-[16rem] overflow-hidden rounded-sm border border-line bg-sand">
-                <div className="flex h-full flex-col items-center justify-center gap-3">
-                  <motion.span
-                    initial={{ opacity: 0, y: 12 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.3 }}
-                    className="font-display text-7xl font-semibold text-ink"
-                  >
-                    JCV
-                  </motion.span>
-                  <span className="h-px w-10 bg-terracotta" />
-                  <p className="px-6 text-center text-xs leading-relaxed tracking-wide text-clay">
-                    {t.about.portraitTag}
-                  </p>
-                </div>
-              </div>
             </Reveal>
           </div>
 

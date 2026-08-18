@@ -62,7 +62,7 @@ export function Skills() {
 
   return (
     <section id="skills" className="border-t border-line bg-sand/60">
-      <div className="mx-auto max-w-6xl px-5 pt-24 sm:px-8 sm:pt-32">
+      <div className="mx-auto max-w-6xl px-5 pt-16 sm:px-8 sm:pt-20">
         <SectionHeading
           eyebrow={t.skills.eyebrow}
           title={t.skills.title}

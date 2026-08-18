@@ -8,7 +8,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="border-t border-line bg-sand/60">
-      <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
+      <div className="mx-auto max-w-6xl px-5 pt-16 pb-20 sm:px-8 sm:pt-20 sm:pb-24">
         <SectionHeading
           eyebrow={t.experience.eyebrow}
           title={t.experience.title}

@@ -42,7 +42,11 @@ export function Navbar() {
 
   const go = (id: string) => {
     setOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      });
+    });
   };
 
   const linkClass = (id: string) =>
