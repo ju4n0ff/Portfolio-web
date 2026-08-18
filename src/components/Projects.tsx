@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { projects } from "../data/projects";
 import { useLanguage } from "../i18n/LanguageContext";
 import { ArrowRightIcon, ExternalIcon, GitHubIcon } from "./Icons";
-import { ProjectPoster } from "./ProjectPoster";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
@@ -35,13 +34,18 @@ export function Projects() {
                     className="relative block overflow-hidden rounded-lg border border-line bg-bone shadow-[0_1px_2px_rgba(44,34,20,0.05)]"
                     aria-label={`${project.name} — ${t.projects.live}`}
                   >
-                    <div className="aspect-[16/9] overflow-hidden">
+                    <div className="overflow-hidden">
                       <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-                        className="h-full w-full"
+                        className="w-full"
                       >
-                        <ProjectPoster project={project} />
+                        <img
+                          src={project.image}
+                          alt={project.imageAlt[lang]}
+                          loading="lazy"
+                          className="block h-auto w-full"
+                        />
                       </motion.div>
                     </div>
                     <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-ink/0 transition-colors duration-500 group-hover:bg-ink/10">

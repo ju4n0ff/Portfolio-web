@@ -40,6 +40,7 @@ export interface Translation {
     eyebrow: string;
     title: string;
     subtitle: string;
+    hint: string;
     categories: {
       frontend: { name: string; hint: string };
       backend: { name: string; hint: string };
@@ -109,6 +110,7 @@ export const translations: Record<Lang, Translation> = {
       eyebrow: "Habilidades",
       title: "Herramientas con las que pienso.",
       subtitle: "Un stack construido sobre bases sólidas y una mentalidad que siempre busca aprender más.",
+      hint: "Arrastra para girar 360° · rueda para zoom · doble clic para centrar",
       categories: {
         frontend: { name: "Frontend", hint: "Interfaces vivas y responsivas" },
         backend: { name: "Backend", hint: "Datos y lógica del servidor" },
@@ -202,6 +204,7 @@ export const translations: Record<Lang, Translation> = {
       eyebrow: "Skills",
       title: "Tools I think with.",
       subtitle: "A stack built on solid foundations, and a mindset that's always looking to learn more.",
+      hint: "Drag to rotate 360° · scroll to zoom · double-click to reset",
       categories: {
         frontend: { name: "Frontend", hint: "Lively, responsive interfaces" },
         backend: { name: "Backend", hint: "Data and server logic" },
