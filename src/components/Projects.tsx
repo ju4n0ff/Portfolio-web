@@ -10,7 +10,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="border-t border-line">
-      <div className="mx-auto max-w-6xl px-5 pt-16 pb-20 sm:px-8 sm:pt-20 sm:pb-24">
+      <div className="mx-auto max-w-6xl px-5 pt-10 pb-20 sm:px-8 sm:pt-12 sm:pb-24">
         <SectionHeading
           eyebrow={t.projects.eyebrow}
           title={t.projects.title}

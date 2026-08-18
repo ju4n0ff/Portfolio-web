@@ -11,7 +11,7 @@ export function App() {
   return (
     <>
       <a
-        href="#hero"
+        href="#inicio"
         className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:text-cream"
       >
         Saltar al contenido

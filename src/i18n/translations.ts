@@ -9,6 +9,7 @@ export interface ExperienceItem {
 export interface Translation {
   langLabel: string;
   nav: {
+    inicio: string;
     about: string;
     skills: string;
     projects: string;
@@ -79,6 +80,7 @@ export const translations: Record<Lang, Translation> = {
   es: {
     langLabel: "EN",
     nav: {
+      inicio: "Inicio",
       about: "Sobre mí",
       skills: "Habilidades",
       projects: "Proyectos",
@@ -173,6 +175,7 @@ export const translations: Record<Lang, Translation> = {
   en: {
     langLabel: "ES",
     nav: {
+      inicio: "Home",
       about: "About",
       skills: "Skills",
       projects: "Projects",

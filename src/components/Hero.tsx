@@ -13,7 +13,7 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="relative flex min-h-svh flex-col overflow-hidden">
+    <section id="inicio" className="relative flex min-h-svh flex-col overflow-hidden">
       <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pt-28 pb-20 sm:px-8">
         <div className="grid items-center gap-14 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
           <div>

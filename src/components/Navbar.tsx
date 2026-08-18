@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useLanguage } from "../i18n/LanguageContext";
 
-const SECTIONS = ["about", "skills", "projects", "experience", "contact"] as const;
+const SECTIONS = ["inicio", "about", "skills", "projects", "experience", "contact"] as const;
 
 export function Navbar() {
   const { lang, t, toggle } = useLanguage();

@@ -35,7 +35,7 @@ export function About() {
 
   return (
     <section id="about" className="border-t border-line">
-      <div className="mx-auto max-w-6xl px-5 pt-16 pb-20 sm:px-8 sm:pt-20 sm:pb-24">
+      <div className="mx-auto max-w-6xl px-5 pt-10 pb-20 sm:px-8 sm:pt-12 sm:pb-24">
         <div className="grid gap-16 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
           <div className="flex flex-col gap-8">
             <Reveal>

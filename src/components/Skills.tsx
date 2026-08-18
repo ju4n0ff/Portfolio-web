@@ -62,12 +62,8 @@ export function Skills() {
 
   return (
     <section id="skills" className="border-t border-line bg-sand/60">
-      <div className="mx-auto max-w-6xl px-5 pt-16 sm:px-8 sm:pt-20">
-        <SectionHeading
-          eyebrow={t.skills.eyebrow}
-          title={t.skills.title}
-          subtitle={t.skills.subtitle}
-        />
+      <div className="mx-auto max-w-6xl px-5 pt-10 sm:px-8 sm:pt-12">
+        <SectionHeading eyebrow={t.skills.eyebrow} title={t.skills.title} />
         <ul className="sr-only">
           {(Object.keys(localized) as CategoryKey[]).map((cat) => (
             <li key={cat}>
@@ -77,7 +73,7 @@ export function Skills() {
         </ul>
       </div>
 
-      <Reveal className="mt-16">
+      <Reveal className="mt-8 sm:mt-10">
         <Suspense
           fallback={
             <div className="mx-auto flex h-[72vh] min-h-[480px] w-full max-w-5xl items-center justify-center border-y border-ink/10 bg-sand">
