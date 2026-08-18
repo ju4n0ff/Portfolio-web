@@ -25,6 +25,40 @@ const MINDSET_EN: Record<string, string> = {
   "Aprendizaje continuo": "Continuous Learning",
 };
 
+const SKILL_HINTS: Record<string, { es: string; en: string }> = {
+  React: { es: "Componentes y Hooks con agilidad", en: "Components & Hooks, agile" },
+  Angular: { es: "Apps empresariales escalables", en: "Scalable enterprise apps" },
+  JavaScript: { es: "Interactividad en la web", en: "Web interactivity" },
+  TypeScript: { es: "Tipado seguro, menos bugs", en: "Safe typing, fewer bugs" },
+  TailwindCSS: { es: "Diseño ágil con utilidades", en: "Agile utility-first styling" },
+  HTML: { es: "Estructura semántica accesible", en: "Semantic, accessible structure" },
+  CSS: { es: "Estilos precisos y modernos", en: "Precise, modern styling" },
+  Bootstrap: { es: "UIs rápidas y responsivas", en: "Fast, responsive UIs" },
+  "Spring Boot": { es: "APIs robustas y seguras", en: "Robust, secure APIs" },
+  PostgreSQL: { es: "Datos confiables y consistentes", en: "Reliable, consistent data" },
+  MongoDB: { es: "Modelos flexibles no relacionales", en: "Flexible document data" },
+  MySQL: { es: "Modelado relacional clásico", en: "Classic relational modeling" },
+  "REST APIs": { es: "Integración entre sistemas", en: "System integration" },
+  Git: { es: "Control de versiones limpio", en: "Clean version control" },
+  GitHub: { es: "Colaboración en código", en: "Code collaboration" },
+  Figma: { es: "Prototipos y diseño UI", en: "UI design & prototyping" },
+  Docker: { es: "Entornos reproducibles", en: "Reproducible environments" },
+  Vercel: { es: "Deploys instantáneos", en: "Instant deploys" },
+  Render: { es: "Hosting de APIs", en: "API hosting" },
+  Railway: { es: "Despliegue sin fricción", en: "Frictionless deployment" },
+  "VS Code": { es: "Mi editor de confianza", en: "My go-to editor" },
+  Trello: { es: "Flujos de trabajo claros", en: "Clear workflows" },
+  "Problem Solving": { es: "Resolver con método", en: "Solve with method" },
+  "Systems Thinking": { es: "Ver el todo, no la parte", en: "See the whole, not parts" },
+  "UI/UX Design": { es: "Interfaces que se entienden", en: "Interfaces people get" },
+  Creatividad: { es: "Ideas que se vuelven diseño", en: "Ideas into design" },
+  Creativity: { es: "Ideas que se vuelven diseño", en: "Ideas into design" },
+  "Trabajo en equipo": { es: "Colaborar para sumar", en: "Collaborate to add up" },
+  Teamwork: { es: "Colaborar para sumar", en: "Collaborate to add up" },
+  "Aprendizaje continuo": { es: "Nunca dejo de aprender", en: "I never stop learning" },
+  "Continuous Learning": { es: "Nunca dejo de aprender", en: "I never stop learning" },
+};
+
 export function Skills() {
   const { lang, t } = useLanguage();
 
@@ -38,7 +72,13 @@ export function Skills() {
     [lang]
   );
 
-  const { nodes, edges, clusters } = useMemo(() => buildNetwork(localized), [localized]);
+  const { nodes, edges, clusters } = useMemo(() => {
+    const hints: Record<string, string> = {};
+    for (const list of Object.values(localized)) {
+      for (const s of list) hints[s] = SKILL_HINTS[s]?.[lang] ?? "";
+    }
+    return buildNetwork(localized, hints);
+  }, [localized, lang]);
 
   const categoryNames = useMemo(
     () => ({
@@ -46,16 +86,6 @@ export function Skills() {
       backend: t.skills.categories.backend.name,
       tools: t.skills.categories.tools.name,
       mindset: t.skills.categories.mindset.name,
-    }),
-    [t]
-  );
-
-  const categoryHints = useMemo(
-    () => ({
-      frontend: t.skills.categories.frontend.hint,
-      backend: t.skills.categories.backend.hint,
-      tools: t.skills.categories.tools.hint,
-      mindset: t.skills.categories.mindset.hint,
     }),
     [t]
   );
@@ -88,7 +118,6 @@ export function Skills() {
             edges={edges}
             clusters={clusters}
             categoryNames={categoryNames}
-            categoryHints={categoryHints}
             hint={t.skills.hint}
           />
         </Suspense>

@@ -5,6 +5,7 @@ export interface NetworkNode {
   label: string;
   category: CategoryKey;
   color: string;
+  hint: string;
   position: [number, number, number];
 }
 
@@ -49,7 +50,7 @@ export interface NetworkCluster {
   labelPosition: [number, number, number];
 }
 
-export function buildNetwork(lists: Record<CategoryKey, string[]>) {
+export function buildNetwork(lists: Record<CategoryKey, string[]>, hints?: Record<string, string>) {
   const nodes: NetworkNode[] = [];
   const edges: NetworkEdge[] = [];
   const clusterLead: Record<CategoryKey, number> = {
@@ -70,6 +71,7 @@ export function buildNetwork(lists: Record<CategoryKey, string[]>) {
         label,
         category: key,
         color: meta.color,
+        hint: hints?.[label] ?? "",
         position: positions[i],
       });
       if (i === 0) clusterLead[key] = start;

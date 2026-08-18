@@ -11,7 +11,6 @@ interface SkillsNetworkProps {
   edges: NetworkEdge[];
   clusters: NetworkCluster[];
   categoryNames: Record<string, string>;
-  categoryHints: Record<string, string>;
   hint: string;
 }
 
@@ -178,7 +177,6 @@ export function SkillsNetwork({
   edges,
   clusters,
   categoryNames,
-  categoryHints,
   hint,
 }: SkillsNetworkProps) {
   const [hovered, setHovered] = useState<number | null>(null);
@@ -271,7 +269,7 @@ export function SkillsNetwork({
                   {hoveredNode.label}
                 </span>
                 <span className="mt-1 block text-xs leading-relaxed text-cream/60">
-                  {categoryHints[hoveredNode.category]}
+                  {hoveredNode.hint}
                 </span>
               </motion.div>
             ) : (
